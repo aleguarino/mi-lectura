@@ -3,15 +3,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.milectura"
+    namespace = "com.guarino.milectura"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.milectura"
+        applicationId = "com.guarino.milectura"
         minSdk = 29
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 5
+        versionName = "1.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

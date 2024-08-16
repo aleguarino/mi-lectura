@@ -10,16 +10,17 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
-        android:name=".MiLecturaApplication"
+        android:name="com.guarino.milectura.MiLecturaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        android:enableOnBackInvokedCallback="true">
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name="com.guarino.milectura.ui.splash.SplashActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>
@@ -29,22 +30,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name="com.guarino.milectura.ui.login.LoginActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"></activity>
-        <activity android:name=".ui.book.BookSearchActivity" />
+        <activity android:name="com.guarino.milectura.ui.book.BookSearchActivity" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.guarino.milectura.ui.MainActivity"
             android:configChanges="screenSize|orientation"
             android:label="@string/app_name"></activity>
 
-        <receiver android:name=".data.broadcast.ReminderBroadcast"
+        <receiver android:name="com.guarino.milectura.data.broadcast.ReminderBroadcast"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name=".data.broadcast.DeviceBootReceiver"
+            android:name="com.guarino.milectura.data.broadcast.DeviceBootReceiver"
             android:enabled="false"
             android:exported="true">
             <intent-filter>
